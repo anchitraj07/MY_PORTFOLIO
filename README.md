@@ -1,16 +1,50 @@
-# React + Vite
+# 🚀 Anchit Raj | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my professional portfolio website! This project showcases my experience as a **Java Backend Engineer**, my technical skills, and key projects.
 
-Currently, two official plugins are available:
+## 🔗 Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+You can access the live portfolio here:
+👉 **[https://anchitraj07.github.io/MY_PORTFOLIO/](https://anchitraj07.github.io/MY_PORTFOLIO/)**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React, Vite, Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: GitHub Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+
+- `src/App.jsx`: Main portfolio component with all sections.
+- `src/index.css`: Global styles and Tailwind configuration.
+- `projects/`: (Separate repositories) Standalone backend projects.
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/anchitraj07/MY_PORTFOLIO.git
+    ```
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Run development server**:
+    ```bash
+    npm run dev
+    ```
+
+## 🏗 Deployment
+
+This project is configured to deploy to GitHub Pages:
+```bash
+npm run deploy
+```
+
+---
+Built with ❤️ by **Anchit Raj**
