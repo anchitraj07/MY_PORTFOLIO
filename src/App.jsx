@@ -337,7 +337,7 @@ const App = () => {
       </main>
 
       <footer className="py-10 text-center border-t border-slate-800 text-slate-500 text-sm">
-        <p>© {new Date().getFullYear()} Anchit Raj. Built with React & Tailwind CSS.</p>
+        <p>© {new Date().getFullYear()} Anchit Raj</p>
       </footer>
     </div>
   );

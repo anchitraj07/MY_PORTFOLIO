@@ -47,4 +47,4 @@ npm run deploy
 ```
 
 ---
-Built with ❤️ by **Anchit Raj**
+Anchit Raj - Java Backend Engineer
