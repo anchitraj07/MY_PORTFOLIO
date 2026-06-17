@@ -12,7 +12,8 @@ import {
   GraduationCap, 
   Briefcase, 
   ChevronRight,
-  Globe
+  Globe,
+  GitBranch
 } from 'lucide-react';
 
 const App = () => {
@@ -111,6 +112,25 @@ const App = () => {
     }
   ];
 
+  const gitRepos = [
+    {
+      name: "MY_PORTFOLIO",
+      description: "My personal portfolio website built with React, Vite, and Tailwind CSS. Features dark mode and dynamic animations.",
+      language: "JavaScript",
+      stars: 1,
+      forks: 0,
+      link: "https://github.com/anchitraj07/MY_PORTFOLIO"
+    },
+    {
+      name: "Active Work 2",
+      description: "Currently working on this open-source project. Details to be updated soon.",
+      language: "Java",
+      stars: 0,
+      forks: 0,
+      link: "#"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-[#0f172a] text-slate-300 font-sans selection:bg-blue-500/30">
       {/* Navigation */}
@@ -122,6 +142,7 @@ const App = () => {
           <div className="hidden md:flex gap-8 text-sm font-medium">
             <a href="#about" className="hover:text-blue-400 transition-colors">About</a>
             <a href="#projects" className="hover:text-blue-400 transition-colors">Projects</a>
+            <a href="#github" className="hover:text-blue-400 transition-colors">Git Repos</a>
             <a href="#experience" className="hover:text-blue-400 transition-colors">Experience</a>
             <a href="#skills" className="hover:text-blue-400 transition-colors">Skills</a>
             <a href="#education" className="hover:text-blue-400 transition-colors">Education</a>
@@ -158,10 +179,6 @@ const App = () => {
               <a href="mailto:anchit.raj.07@gmail.com" className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-lg shadow-blue-600/20">
                 <Mail className="w-4 h-4" /> Say Hello
               </a>
-              <div className="flex items-center gap-4 px-2">
-                <a href="#" className="p-2 hover:text-white transition-colors"><Globe className="w-6 h-6" /></a>
-                <a href="#" className="p-2 hover:text-white transition-colors"><ExternalLink className="w-6 h-6" /></a>
-              </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div className="flex items-center gap-3 text-slate-400">
@@ -205,6 +222,49 @@ const App = () => {
                   <a href={project.link} className="inline-flex items-center gap-2 text-blue-400 font-bold hover:text-white transition-colors">
                     View Project <ExternalLink className="w-4 h-4" />
                   </a>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Git Repos Section */}
+        <section id="github" className="mb-32">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
+            <h2 className="text-3xl font-bold text-white mb-12 flex items-center gap-4">
+              <GitBranch className="w-8 h-8 text-blue-400" /> Active Git Repos
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {gitRepos.map((repo, idx) => (
+                <div key={idx} className="p-6 bg-slate-800/30 rounded-xl border border-slate-700/50 hover:border-slate-500 transition-all">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors flex items-center gap-2">
+                      <GitBranch className="w-5 h-5" /> {repo.name}
+                    </h3>
+                    <a href={repo.link} className="text-slate-400 hover:text-white transition-colors">
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  </div>
+                  <p className="text-slate-400 mb-6 text-sm leading-relaxed">
+                    {repo.description}
+                  </p>
+                  <div className="flex items-center gap-6 text-sm text-slate-500">
+                    <div className="flex items-center gap-2">
+                      <div className={`w-3 h-3 rounded-full ${repo.language === 'JavaScript' ? 'bg-yellow-400' : 'bg-blue-500'}`}></div>
+                      {repo.language}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      ⭐ {repo.stars}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <ExternalLink className="w-4 h-4" /> {repo.forks}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
